@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<title>Para Beatriz ❤️</title>
+
+<style>
+body{
+    margin:0;
+    padding:0;
+    background:black;
+    overflow:hidden;
+    font-family:'Segoe UI', sans-serif;
+    color:white;
+}
+
+/* Estrellas */
+.stars{
+    position:fixed;
+    width:100%;
+    height:100%;
+}
+.star{
+    position:absolute;
+    width:2px;
+    height:2px;
+    background:white;
+    animation:twinkle 2s infinite alternate;
+}
+@keyframes twinkle{
+    from{opacity:0.2;}
+    to{opacity:1;}
+}
+
+/* Carta */
+.container{
+    position:absolute;
+    top:50%;
+    left:50%;
+    transform:translate(-50%, -50%);
+    background:rgba(0,0,0,0.7);
+    padding:30px;
+    border-radius:15px;
+    max-width:700px;
+    text-align:center;
+    box-shadow:0 0 20px rgba(255,255,255,0.3);
+}
+
+button{
+    margin-top:20px;
+    padding:10px 20px;
+    border:none;
+    border-radius:20px;
+    background:#ff4e8a;
+    color:white;
+    font-size:16px;
+    cursor:pointer;
+}
+
+.hidden{
+    display:none;
+}
+
+.final{
+    font-size:40px;
+    margin-top:20px;
+    animation:beat 1s infinite;
+    color:#ff4e8a;
+}
+
+@keyframes beat{
+    0%{transform:scale(1);}
+    50%{transform:scale(1.1);}
+    100%{transform:scale(1);}
+}
+</style>
+</head>
+<body>
+
+<audio autoplay loop>
+<source src="https://www.soundhelix.com/examples/mp3/SoundHelix-Song-1.mp3" type="audio/mp3">
+</audio>
+
+<div class="stars" id="stars"></div>
+
+<div class="container" id="page1">
+<h1>❤️</h1>
+<button onclick="next(2)">Continuar</button>
+</div>
+
+<div class="container hidden" id="page2">
+<h2>Para mi mujer Beatriz ❤️</h2>
+<p>
+Sé que esto no es lo más caro pero quiero que sepas que lo creé con todo mi amor y cariño para ti.
+Sé que no te puedo regalar flores, peluche o chocolate pero créeme que si pudiera lo hiciera 😔
+</p>
+<button onclick="next(3)">Continuar</button>
+</div>
+
+<div class="container hidden" id="page3">
+<p>
+Quiero recordarte en este día tan especial del amor y la amistad que te amo con todo mi corazón ♥️
+Eres muy especial en mi vida 😍 te amo mucho y siempre te lo he dicho y lo he demostrado,
+pero te lo digo una vez más: te amo 😘
+
+Espero algún día poder regalarte lo que te mereces y mucho más.
+Espero que nuestro amor dure para siempre y que la distancia no nos quite las ganas de seguir juntos
+aunque sea a través de una pantalla 🥺
+
+Desde que llegaste mi vida cambiaste, me estás dando la felicidad,
+el amor y el cariño que siempre quise 🥹
+
+Sé que no soy el mejor hombre pero todos los días trato de mejorar
+para darte mi mejor versión 💕💗 porque tú te mereces todo el amor que tengo.
+Te lo has ganado.
+
+No te amo por lo que mis ojos vieron sino por lo que mi alma y mi corazón sintieron.
+Contigo sentí una conexión que no tiene explicación 😍
+
+Antes de verte ya te amaba.
+Me enamoré de tu voz, de la forma en la que me tratas.
+No me enamoré de tu cuerpo o tu rostro sino de esa dulce voz
+que me hablaba cada día en un videojuego a través de una pantalla.
+
+Tu risa… no pensé que la vida me regalaría algo tan especial.
+Me encantas: tu sonrisa, tu voz, tu forma de ser… me encanta todo de ti.
+
+Al principio me daba miedo porque nunca me habías visto.
+Pensé que cuando me vieras te ibas a arrepentir pero no.
+Contigo puedo ser yo, sacar el niño que llevo dentro.
+No tengo que ocultar nada.
+Gracias por aceptarme tal y como soy.
+</p>
+
+<div class="final">TE AMO BEATRIZ ❤️</div>
+</div>
+
+<script>
+let stars = document.getElementById("stars");
+
+for(let i=0;i<200;i++){
+let star = document.createElement("div");
+star.className="star";
+star.style.left=Math.random()*100+"%";
+star.style.top=Math.random()*100+"%";
+star.style.animationDuration=(Math.random()*3+1)+"s";
+stars.appendChild(star);
+}
+
+function next(page){
+document.getElementById("page1").classList.add("hidden");
+document.getElementById("page2").classList.add("hidden");
+document.getElementById("page3").classList.add("hidden");
+document.getElementById("page"+page).classList.remove("hidden");
+}
+</script>
+
+</body>
+</html>
