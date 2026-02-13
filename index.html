@@ -2,157 +2,184 @@
 <html lang="es">
 <head>
 <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Para Beatriz ❤️</title>
 
 <style>
+
 body{
-    margin:0;
-    padding:0;
-    background:black;
-    overflow:hidden;
-    font-family:'Segoe UI', sans-serif;
-    color:white;
+margin:0;
+padding:0;
+background:black;
+color:white;
+font-family:Arial;
+text-align:center;
+overflow:hidden;
 }
 
-/* Estrellas */
+/* estrellas */
 .stars{
-    position:fixed;
-    width:100%;
-    height:100%;
-}
-.star{
-    position:absolute;
-    width:2px;
-    height:2px;
-    background:white;
-    animation:twinkle 2s infinite alternate;
-}
-@keyframes twinkle{
-    from{opacity:0.2;}
-    to{opacity:1;}
+position:fixed;
+width:100%;
+height:100%;
+background:url('https://i.imgur.com/YKY28eT.png');
+animation:moveStars 60s linear infinite;
+z-index:-1;
 }
 
-/* Carta */
-.container{
-    position:absolute;
-    top:50%;
-    left:50%;
-    transform:translate(-50%, -50%);
-    background:rgba(0,0,0,0.7);
-    padding:30px;
-    border-radius:15px;
-    max-width:700px;
-    text-align:center;
-    box-shadow:0 0 20px rgba(255,255,255,0.3);
+@keyframes moveStars{
+from{background-position:0 0;}
+to{background-position:0 1000px;}
 }
 
+/* botón */
 button{
-    margin-top:20px;
-    padding:10px 20px;
-    border:none;
-    border-radius:20px;
-    background:#ff4e8a;
-    color:white;
-    font-size:16px;
-    cursor:pointer;
+margin-top:300px;
+padding:15px 30px;
+font-size:22px;
+background:#ff4e8a;
+border:none;
+border-radius:30px;
+color:white;
+box-shadow:0 0 20px pink;
 }
 
+/* oculto */
 .hidden{
-    display:none;
+display:none;
+}
+
+/* foto */
+.photo{
+margin-top:40px;
+width:260px;
+border-radius:20px;
+box-shadow:0 0 40px pink;
+animation:float 3s ease-in-out infinite;
+}
+
+@keyframes float{
+0%,100%{transform:translateY(0);}
+50%{transform:translateY(-20px);}
+}
+
+/* texto */
+.text{
+padding:20px;
+font-size:20px;
+max-width:700px;
+margin:auto;
+}
+
+/* corazones */
+.heart{
+position:fixed;
+color:red;
+font-size:20px;
+animation:fall 5s linear infinite;
+}
+
+@keyframes fall{
+from{transform:translateY(-100px);}
+to{transform:translateY(100vh);}
 }
 
 .final{
-    font-size:40px;
-    margin-top:20px;
-    animation:beat 1s infinite;
-    color:#ff4e8a;
+font-size:35px;
+color:#ff4e8a;
+animation:beat 1s infinite;
 }
 
 @keyframes beat{
-    0%{transform:scale(1);}
-    50%{transform:scale(1.1);}
-    100%{transform:scale(1);}
+0%{transform:scale(1);}
+50%{transform:scale(1.2);}
+100%{transform:scale(1);}
 }
+
 </style>
 </head>
+
 <body>
 
-<audio autoplay loop>
-<source src="https://www.soundhelix.com/examples/mp3/SoundHelix-Song-1.mp3" type="audio/mp3">
-</audio>
+<div class="stars"></div>
 
-<div class="stars" id="stars"></div>
-
-<div class="container" id="page1">
-<h1>❤️</h1>
-<button onclick="next(2)">Continuar</button>
+<div id="inicio">
+<button onclick="iniciar()">Presiona aquí amor ❤️</button>
 </div>
 
-<div class="container hidden" id="page2">
-<h2>Para mi mujer Beatriz ❤️</h2>
-<p>
+<div id="contenido" class="hidden">
+
+<img src="https://i.imgur.com/REEMPLAZA_CON_TU_FOTO.jpg" class="photo">
+
+<div class="text">
+
+Para mi mujer Beatriz ❤️<br><br>
+
 Sé que esto no es lo más caro pero quiero que sepas que lo creé con todo mi amor y cariño para ti.
-Sé que no te puedo regalar flores, peluche o chocolate pero créeme que si pudiera lo hiciera 😔
-</p>
-<button onclick="next(3)">Continuar</button>
-</div>
+Sé que no te puedo regalar flores, peluche o chocolate pero créeme que si pudiera lo hiciera 😔<br><br>
 
-<div class="container hidden" id="page3">
-<p>
 Quiero recordarte en este día tan especial del amor y la amistad que te amo con todo mi corazón ♥️
-Eres muy especial en mi vida 😍 te amo mucho y siempre te lo he dicho y lo he demostrado,
-pero te lo digo una vez más: te amo 😘
+que eres muy especial en mi vida 😍 te amo mucho y siempre te lo he dicho y lo he demostrado
+pero te lo digo una vez más te amo 😘<br><br>
 
 Espero algún día poder regalarte lo que te mereces y mucho más.
 Espero que nuestro amor dure para siempre y que la distancia no nos quite las ganas de seguir juntos
-aunque sea a través de una pantalla 🥺
+aunque sea a través de una pantalla 🥺<br><br>
 
-Desde que llegaste mi vida cambiaste, me estás dando la felicidad,
-el amor y el cariño que siempre quise 🥹
+Desde que llegaste mi vida cambiaste, me estás dando la felicidad, el amor y el cariño que siempre quise 🥹<br><br>
 
-Sé que no soy el mejor hombre pero todos los días trato de mejorar
-para darte mi mejor versión 💕💗 porque tú te mereces todo el amor que tengo.
-Te lo has ganado.
+Sé que no soy el mejor hombre pero todos los días trato de mejorar para darte mi mejor versión 💕💗<br><br>
 
-No te amo por lo que mis ojos vieron sino por lo que mi alma y mi corazón sintieron.
-Contigo sentí una conexión que no tiene explicación 😍
+No te amo por lo que mis ojos vieron sino por lo que mi alma y mi corazón sintieron contigo sentí una conexión que no tiene explicación 😍<br><br>
 
-Antes de verte ya te amaba.
-Me enamoré de tu voz, de la forma en la que me tratas.
-No me enamoré de tu cuerpo o tu rostro sino de esa dulce voz
-que me hablaba cada día en un videojuego a través de una pantalla.
+Antes de verte ya te amaba, me enamoré de tu voz, de la forma en la que me tratas.<br><br>
 
-Tu risa… no pensé que la vida me regalaría algo tan especial.
-Me encantas: tu sonrisa, tu voz, tu forma de ser… me encanta todo de ti.
-
-Al principio me daba miedo porque nunca me habías visto.
-Pensé que cuando me vieras te ibas a arrepentir pero no.
-Contigo puedo ser yo, sacar el niño que llevo dentro.
-No tengo que ocultar nada.
-Gracias por aceptarme tal y como soy.
-</p>
+Gracias por aceptarme tal y como soy.<br><br>
 
 <div class="final">TE AMO BEATRIZ ❤️</div>
+
 </div>
 
+</div>
+
+<!-- canción original -->
+<iframe id="musica" width="0" height="0"
+src=""
+allow="autoplay">
+</iframe>
+
 <script>
-let stars = document.getElementById("stars");
 
-for(let i=0;i<200;i++){
-let star = document.createElement("div");
-star.className="star";
-star.style.left=Math.random()*100+"%";
-star.style.top=Math.random()*100+"%";
-star.style.animationDuration=(Math.random()*3+1)+"s";
-stars.appendChild(star);
+function iniciar(){
+
+document.getElementById("inicio").style.display="none";
+
+document.getElementById("contenido").classList.remove("hidden");
+
+document.getElementById("musica").src="https://www.youtube.com/embed/kcW8QvE8HcE?autoplay=1&loop=1&playlist=kcW8QvE8HcE";
+
+setInterval(crearCorazon,300);
+
 }
 
-function next(page){
-document.getElementById("page1").classList.add("hidden");
-document.getElementById("page2").classList.add("hidden");
-document.getElementById("page3").classList.add("hidden");
-document.getElementById("page"+page).classList.remove("hidden");
+function crearCorazon(){
+
+let heart=document.createElement("div");
+
+heart.className="heart";
+
+heart.innerHTML="❤️";
+
+heart.style.left=Math.random()*100+"vw";
+
+heart.style.animationDuration=(Math.random()*3+2)+"s";
+
+document.body.appendChild(heart);
+
+setTimeout(()=>heart.remove(),5000);
+
 }
+
 </script>
 
 </body>
