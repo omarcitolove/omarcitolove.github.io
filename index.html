@@ -6,7 +6,15 @@
 <title>Para Beatriz ❤️</title>
 
 <style>
+<audio id="musica" loop>
+  <source src="those-eyes.mp3" type="audio/mpeg">
+</audio>
 
+<script>
+  document.addEventListener("click", function() {
+    document.getElementById("musica").play();
+  });
+</script>
 body{
 margin:0;
 padding:0;
@@ -22,7 +30,7 @@ overflow:hidden;
 position:fixed;
 width:100%;
 height:100%;
-background:url('https://i.imgur.com/YKY28eT.png');
+background:url('https://i.imgur.com/IMG_1767.jpeg;
 animation:moveStars 60s linear infinite;
 z-index:-1;
 }
